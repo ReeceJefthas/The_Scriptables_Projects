@@ -1,6 +1,10 @@
+#import for a random number
+import random
+#to generate a random number
 number = random.randint(1, 50)
 print("Im thinking of a number between 1 and 50 ")
 guessesTaken = 0
+#how much guesses they can have
 
 while guessesTaken < 6:
     guess = input("Enter a guess: ")
@@ -17,4 +21,5 @@ if guess == number:
     print("U win")
 else:
     print("U lose better luck next time")
+
 
