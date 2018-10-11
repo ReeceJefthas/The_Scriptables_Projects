@@ -1,15 +1,20 @@
-import random
+number = random.randint(1, 50)
+print("Im thinking of a number between 1 and 50 ")
+guessesTaken = 0
 
-random_number = random.randint(1, 10)
-
-guess_number = 0
-
-while guess_number != random_number:
-    guess_number = int(input("Please give a guess between 1 and 10: "))
-
-    if(random_number < guess_number):
-        print("The number is smaller than your number given")
-    elif(random_number > guess_number):
-        print("The number is greater than your number")
+while guessesTaken < 6:
+    guess = input("Enter a guess: ")
+    guess = int(guess)
+    guessesTaken = guessesTaken + 1
+    if guess < number:
+        print("That was too low.")
+    elif guess > number:
+        print("That was too high")
     else:
-        print("This is your number!")
+        break
+
+if guess == number:
+    print("U win")
+else:
+    print("U lose better luck next time")
+
